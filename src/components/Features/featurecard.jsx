@@ -1,4 +1,4 @@
-function FeatureCard({ icon, title, description }) {
+function FeatureCard({ icon, title, description, href }) {
   return (
     <div className="feature-card">
       <div className="feature-icon">{icon}</div>
@@ -7,7 +7,9 @@ function FeatureCard({ icon, title, description }) {
 
       <p>{description}</p>
 
-      <button>Open</button>
+      <a href={href} target="_blank" rel="noopener noreferrer">
+        <button>Open</button>
+      </a>
     </div>
   );
 }

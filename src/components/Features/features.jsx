@@ -1,6 +1,7 @@
 import "./features.css";
 import FeatureCard from "./featurecard";
 
+
 function Features() {
   const features = [
     {
@@ -20,6 +21,7 @@ function Features() {
       title: "Gaming Community",
       description:
         "Connect with other gamers and share your gaming experiences.",
+      href: "https://discord.com/invite/valorant"
     },
     {
       icon: "⚡",
@@ -48,6 +50,7 @@ function Features() {
             icon={feature.icon}
             title={feature.title}
             description={feature.description}
+            href={feature.href}
           />
         ))}
       </div>
