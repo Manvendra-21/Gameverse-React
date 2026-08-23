@@ -1,0 +1,95 @@
+.services {
+  padding: 90px 8%;
+  background-color: #111827;
+  color: white;
+}
+
+.services-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 50px;
+}
+
+.services-heading p {
+  color: #a78bfa;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 12px;
+}
+
+.services-heading h2 {
+  font-size: 42px;
+  margin: 0 0 15px;
+}
+
+.services-heading span {
+  color: #94a3b8;
+  font-size: 17px;
+}
+
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.service-card {
+  padding: 35px 30px;
+  text-align: center;
+  background-color: #1e293b;
+  border-radius: 15px;
+  border: 1px solid #334155;
+  transition: 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  border-color: #8b5cf6;
+  box-shadow: 0 10px 30px rgba(139, 92, 246, 0.2);
+}
+
+.service-icon {
+  font-size: 45px;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  font-size: 23px;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #94a3b8;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.service-card button {
+  padding: 11px 22px;
+  border: none;
+  border-radius: 7px;
+  background-color: #8b5cf6;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.service-card button:hover {
+  background-color: #7c3aed;
+  transform: scale(1.05);
+}
+
+@media (max-width: 800px) {
+  .services {
+    padding: 70px 25px;
+  }
+
+  .services-heading h2 {
+    font-size: 32px;
+  }
+
+  .services-container {
+    grid-template-columns: 1fr;
+  }
+}

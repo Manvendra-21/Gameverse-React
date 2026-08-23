@@ -1,18 +1,51 @@
+import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  function toggleMenu() {
+    setMenuOpen((previousState) => !previousState);
+  }
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
+
   return (
     <nav className="navbar">
       <div className="logo">
         🎮 Gamverse
       </div>
 
-      <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#features">Features</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <button
+        className="menu-button"
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+      >
+        {menuOpen ? "✕" : "☰"}
+      </button>
+
+      <ul className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+        <li>
+          <a href="#home" onClick={closeMenu}>Home</a>
+        </li>
+
+        <li>
+          <a href="#features" onClick={closeMenu}>Features</a>
+        </li>
+
+        <li>
+          <a href="#services" onClick={closeMenu}>Services</a>
+        </li>
+
+        <li>
+          <a href="#about" onClick={closeMenu}>About</a>
+        </li>
+
+        <li>
+          <a href="#contact" onClick={closeMenu}>Contact</a>
+        </li>
       </ul>
 
       <button className="nav-button">

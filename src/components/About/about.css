@@ -1,0 +1,147 @@
+.about {
+  min-height: 75vh;
+  padding: 100px 8%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 80px;
+  background-color: #0f172a;
+  color: white;
+}
+
+.about-image {
+  width: 45%;
+  min-height: 400px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.about-circle {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #312e81;
+  font-size: 130px;
+  box-shadow: 0 0 80px rgba(139, 92, 246, 0.35);
+}
+
+.about-badge {
+  position: absolute;
+  right: 5%;
+  bottom: 45px;
+  padding: 18px 22px;
+  display: flex;
+  flex-direction: column;
+  background-color: #8b5cf6;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-badge strong {
+  font-size: 25px;
+}
+
+.about-badge span {
+  font-size: 13px;
+  margin-top: 3px;
+}
+
+.about-content {
+  width: 50%;
+  max-width: 600px;
+}
+
+.about-tag {
+  color: #a78bfa;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.about-content h2 {
+  font-size: 45px;
+  line-height: 1.2;
+  margin: 0 0 25px;
+}
+
+.about-content h2 span {
+  color: #8b5cf6;
+}
+
+.about-content > p {
+  color: #94a3b8;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+
+.about-stats {
+  display: flex;
+  gap: 45px;
+  margin-top: 35px;
+}
+
+.about-stats div {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-stats strong {
+  color: #a78bfa;
+  font-size: 28px;
+}
+
+.about-stats span {
+  color: #94a3b8;
+  margin-top: 5px;
+}
+
+@media (max-width: 850px) {
+  .about {
+    padding: 70px 25px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .about-image,
+  .about-content {
+    width: 100%;
+  }
+
+  .about-content {
+    text-align: center;
+  }
+
+  .about-circle {
+    width: 240px;
+    height: 240px;
+    font-size: 100px;
+  }
+
+  .about-badge {
+    right: 15%;
+  }
+
+  .about-stats {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .about-content h2 {
+    font-size: 34px;
+  }
+
+  .about-stats {
+    gap: 25px;
+  }
+
+  .about-badge {
+    right: 0;
+  }
+}
