@@ -49,7 +49,7 @@ function Navbar() {
       </ul>
 
       <button className="nav-button">
-        Get Started
+        Login
       </button>
     </nav>
   );

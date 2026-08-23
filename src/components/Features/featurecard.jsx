@@ -7,7 +7,7 @@ function FeatureCard({ icon, title, description }) {
 
       <p>{description}</p>
 
-      <button>Learn More</button>
+      <button>Open</button>
     </div>
   );
 }

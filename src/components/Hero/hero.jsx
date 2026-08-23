@@ -18,13 +18,14 @@ function Hero() {
 
         <div className="hero-buttons">
           <button className="primary-btn">Explore Games</button>
-          <button className="secondary-btn">Learn More</button>
         </div>
       </div>
 
       <div className="hero-image">
-        <div className="game-controller">🎮</div>
-        <div className="floating-text">LEVEL UP!</div>
+        <button  onClick={() => window.open("https://dinogameonline.io/", "_blank")} className="game-button">
+          <div className="game-controller">🎮</div>
+          <div className="floating-text">CLICK TO PLAY !</div>
+        </button>
       </div>
     </section>
   );

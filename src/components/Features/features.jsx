@@ -7,7 +7,7 @@ function Features() {
       icon: "🎮",
       title: "Game Discovery",
       description:
-        "Discover exciting games and explore new gaming experiences.",
+        "Discover exciting games and explore new gaming experiences.",  
     },
     {
       icon: "🏆",
