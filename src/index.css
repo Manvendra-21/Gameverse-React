@@ -1,0 +1,131 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+
+.theme-toggle {
+  position: fixed;
+  bottom: 25px;
+  left: 25px;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  background-color: #8b5cf6;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 2000;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  transition: 0.3s;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.1);
+}
+
+
+body.light-theme {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+body.light-theme .navbar {
+  background-color: #e0e7ff;
+  color: #0f172a;
+}
+
+body.light-theme .nav-links a {
+  color: #0f172a;
+}
+
+body.light-theme .hero {
+  background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+  color: #0f172a;
+}
+
+body.light-theme .hero-description {
+  color: #475569;
+}
+
+body.light-theme .features {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+body.light-theme .feature-card {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .feature-card p {
+  color: #475569;
+}
+
+body.light-theme .services {
+  background-color: #e0e7ff;
+  color: #0f172a;
+}
+
+body.light-theme .service-card {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .service-card p {
+  color: #475569;
+}
+
+body.light-theme .about {
+  background-color: #f1f5f9;
+  color: #0f172a;
+}
+
+body.light-theme .about-content > p {
+  color: #475569;
+}
+
+body.light-theme .about-stats span {
+  color: #475569;
+}
+
+body.light-theme .contact {
+  background-color: #e0e7ff;
+  color: #0f172a;
+}
+
+body.light-theme .contact-info > p {
+  color: #475569;
+}
+
+body.light-theme .contact-item p {
+  color: #475569;
+}
+
+body.light-theme .contact-form {
+  background-color: #ffffff;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .contact-form input,
+body.light-theme .contact-form textarea {
+  background-color: #f8fafc;
+  color: #0f172a;
+  border-color: #cbd5e1;
+}
+
+body.light-theme .footer {
+  background-color: #cbd5e1;
+  color: #0f172a;
+}
