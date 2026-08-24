@@ -2,14 +2,17 @@ import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
-<<<<<<< HEAD
+  const [menuOpen, setMenuOpen] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
-
   const [loggedInUser, setLoggedInUser] = useState(
     localStorage.getItem("loggedInUser") || null
   );
+
+  function closeMenu() {
+    setMenuOpen(false);
+  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -17,7 +20,6 @@ function Navbar() {
     const users = JSON.parse(localStorage.getItem("users")) || {};
 
     if (users[userId]) {
-      // ID exists, check password
       if (users[userId] === password) {
         localStorage.setItem("loggedInUser", userId);
         setLoggedInUser(userId);
@@ -28,7 +30,6 @@ function Navbar() {
         alert("Wrong password.");
       }
     } else {
-      // ID doesn't exist, create it and log in
       users[userId] = password;
       localStorage.setItem("users", JSON.stringify(users));
       localStorage.setItem("loggedInUser", userId);
@@ -42,19 +43,38 @@ function Navbar() {
   function handleLogout() {
     localStorage.removeItem("loggedInUser");
     setLoggedInUser(null);
+    closeMenu();
   }
 
   return (
     <>
       <nav className="navbar">
-        <div className="logo">🎮 Gamverse</div>
+        <div className="logo">Gameverse</div>
 
-        <ul className="nav-links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
+        <button
+          className="menu-button"
+          onClick={() => setMenuOpen((previousState) => !previousState)}
+          aria-label="Toggle navigation menu"
+        >
+          {menuOpen ? "x" : "menu"}
+        </button>
+
+        <ul className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+          <li>
+            <a href="#home" onClick={closeMenu}>Home</a>
+          </li>
+          <li>
+            <a href="#features" onClick={closeMenu}>Features</a>
+          </li>
+          <li>
+            <a href="#services" onClick={closeMenu}>Services</a>
+          </li>
+          <li>
+            <a href="#about" onClick={closeMenu}>About</a>
+          </li>
+          <li>
+            <a href="#contact" onClick={closeMenu}>Contact</a>
+          </li>
         </ul>
 
         <div className="auth-section">
@@ -77,7 +97,7 @@ function Navbar() {
         <div className="auth-overlay">
           <div className="auth-box">
             <button className="close-button" onClick={() => setShowAuth(false)}>
-              ✕
+              x
             </button>
 
             <h2>Login</h2>
@@ -107,58 +127,6 @@ function Navbar() {
         </div>
       )}
     </>
-=======
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  function toggleMenu() {
-    setMenuOpen((previousState) => !previousState);
-  }
-
-  function closeMenu() {
-    setMenuOpen(false);
-  }
-
-  return (
-    <nav className="navbar">
-      <div className="logo">
-        🎮 Gamverse
-      </div>
-
-      <button
-        className="menu-button"
-        onClick={toggleMenu}
-        aria-label="Toggle navigation menu"
-      >
-        {menuOpen ? "✕" : "☰"}
-      </button>
-
-      <ul className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
-        <li>
-          <a href="#home" onClick={closeMenu}>Home</a>
-        </li>
-
-        <li>
-          <a href="#features" onClick={closeMenu}>Features</a>
-        </li>
-
-        <li>
-          <a href="#services" onClick={closeMenu}>Services</a>
-        </li>
-
-        <li>
-          <a href="#about" onClick={closeMenu}>About</a>
-        </li>
-
-        <li>
-          <a href="#contact" onClick={closeMenu}>Contact</a>
-        </li>
-      </ul>
-
-      <button className="nav-button">
-        Login
-      </button>
-    </nav>
->>>>>>> f2633e6a9f470237941a1235be93884418087bd8
   );
 }
 
