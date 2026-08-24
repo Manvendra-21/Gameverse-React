@@ -109,6 +109,7 @@
     display: block;
     padding: 12px;
   }
+<<<<<<< HEAD
 }
 
 .auth-section {
@@ -182,4 +183,6 @@
   background: none;
   font-size: 20px;
   cursor: pointer;
+=======
+>>>>>>> f2633e6a9f470237941a1235be93884418087bd8
 }
