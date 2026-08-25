@@ -10,9 +10,6 @@ function Navbar() {
     localStorage.getItem("loggedInUser") || null
   );
 
-  function closeMenu() {
-    setMenuOpen(false);
-  }
 
   function handleSubmit(e) {
     e.preventDefault();
@@ -50,14 +47,6 @@ function Navbar() {
     <>
       <nav className="navbar">
         <div className="logo">Gameverse</div>
-
-        <button
-          className="menu-button"
-          onClick={() => setMenuOpen((previousState) => !previousState)}
-          aria-label="Toggle navigation menu"
-        >
-          {menuOpen ? "x" : "menu"}
-        </button>
 
         <ul className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
           <li>
