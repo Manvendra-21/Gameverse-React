@@ -2,7 +2,6 @@ import { useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
-  const [menuOpen, setMenuOpen] = useState(false);
   const [showAuth, setShowAuth] = useState(false);
   const [userId, setUserId] = useState("");
   const [password, setPassword] = useState("");
@@ -40,7 +39,6 @@ function Navbar() {
   function handleLogout() {
     localStorage.removeItem("loggedInUser");
     setLoggedInUser(null);
-    closeMenu();
   }
 
   return (
@@ -48,21 +46,21 @@ function Navbar() {
       <nav className="navbar">
         <div className="logo">Gameverse</div>
 
-        <ul className={`nav-links ${menuOpen ? "mobile-open" : ""}`}>
+        <ul className="nav-links">
           <li>
-            <a href="#home" onClick={closeMenu}>Home</a>
+            <a href="#home">Home</a>
           </li>
           <li>
-            <a href="#features" onClick={closeMenu}>Features</a>
+            <a href="#features">Features</a>
           </li>
           <li>
-            <a href="#services" onClick={closeMenu}>Services</a>
+            <a href="#services">Services</a>
           </li>
           <li>
-            <a href="#about" onClick={closeMenu}>About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#contact" onClick={closeMenu}>Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
 
