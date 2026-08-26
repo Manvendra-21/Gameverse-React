@@ -1,8 +1,6 @@
 import "./footer.css";
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <footer className="footer">
       <div className="footer-container">
@@ -71,7 +69,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <p>
-          © {currentYear} Gamverse. All rights reserved.
+          © 2026 Gamverse. All rights reserved.
         </p>
 
         <p>Made with ❤️ for gamers.</p>
