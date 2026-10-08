@@ -1,12 +1,19 @@
 import "./services.css";
+import { useNavigate } from "react-router-dom";
 
 function Services() {
+  const navigate = useNavigate();
+
   const services = [
     {
       icon: "🎮",
       title: "Game Reviews",
       description:
         "Get useful information and reviews to help you discover your next game.",
+        action: () => {
+          navigate("/game-reviews");
+          window.scrollTo(0, 0);
+        },
     },
     {
       icon: "📰",
@@ -36,7 +43,14 @@ function Services() {
 
       <div className="services-container">
         {services.map((service, index) => (
-          <div className="service-card" key={index}>
+          <div
+            className="service-card"
+            key={index}
+            onClick={service.action}
+            style={{
+              cursor: service.action ? "pointer" : "default",
+            }}
+          >
             <div className="service-icon">{service.icon}</div>
 
             <h3>{service.title}</h3>

@@ -6,11 +6,9 @@ import About from "./components/About/about.jsx";
 import Contact from "./components/Contact/contact.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import ThemeToggle from "./components/UI/themeToggle.jsx";
-
 import { Routes, Route } from "react-router-dom";
-
 import GameDiscovery from "./components/GameDiscovery/GameDiscovery.jsx";
-
+import GameReviews from "./components/GameReviews/GameReviews.jsx";
 
 function Home() {
   return (
@@ -40,6 +38,11 @@ function App() {
       <Route
         path="/games"
         element={<GameDiscovery />}
+      />
+
+      <Route
+        path="/game-reviews"
+        element={<GameReviews />}
       />
 
     </Routes>
