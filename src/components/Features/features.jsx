@@ -27,12 +27,6 @@ function Features() {
         "Connect with other gamers and share your gaming experiences.",
       href: "https://discord.com/invite/valorant"
     },
-    {
-      icon: "⚡",
-      title: "Fast Experience",
-      description:
-        "Enjoy a smooth and responsive gaming platform designed for gamers.",
-    },
   ];
 
   return (

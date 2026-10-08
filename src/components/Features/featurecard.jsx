@@ -18,7 +18,7 @@ function FeatureCard({
 
       {onClick ? (
         <button onClick={onClick}>
-          Open
+          Dive In
         </button>
       ) : (
         <a
