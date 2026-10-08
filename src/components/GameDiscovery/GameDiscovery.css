@@ -325,44 +325,6 @@
 
   margin: 15px 0;
 }
-
-
-/* =========================
-   BUTTON
-========================= */
-
-.game-button {
-  width: 100%;
-
-  padding: 11px;
-
-  border-radius: 9px;
-
-  border: 1px solid
-    rgba(168, 85, 247, 0.4);
-
-  background: rgba(
-    139,
-    92,
-    246,
-    0.12
-  );
-
-  color: white;
-
-  cursor: pointer;
-
-  transition: 0.25s;
-}
-
-
-.game-button:hover {
-  background: #8b5cf6;
-
-  border-color: #8b5cf6;
-}
-
-
 /* =========================
    RESPONSIVE
 ========================= */

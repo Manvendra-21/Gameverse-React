@@ -238,21 +238,6 @@ function GameDiscovery() {
 
 
       {/* =========================
-          GENRE TITLE
-      ========================= */}
-
-      <div className="genre-title">
-
-        <h2>Choose a Genre</h2>
-
-        <p>
-          Explore games based on what you love to play.
-        </p>
-
-      </div>
-
-
-      {/* =========================
           GENRE BOXES
       ========================= */}
 
@@ -364,10 +349,6 @@ function GameDiscovery() {
                     <div className="game-platform">
                       🎮 {game.platforms}
                     </div>
-
-                    <button className="game-button">
-                      View Game
-                    </button>
 
                   </div>
 
