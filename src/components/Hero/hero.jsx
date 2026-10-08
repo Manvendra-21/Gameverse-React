@@ -1,4 +1,5 @@
 import "./hero.css";
+import { useNavigate } from "react-router-dom";
 
 function Hero() {
   return (
@@ -15,10 +16,6 @@ function Hero() {
           Discover amazing games, explore new adventures, and experience
           gaming like never before.
         </p>
-
-        <div className="hero-buttons">
-          <button className="primary-btn">Explore Games</button>
-        </div>
       </div>
 
       <div className="hero-image">

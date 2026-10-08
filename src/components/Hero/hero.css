@@ -5,7 +5,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 50px;
-  background: linear-gradient(135deg, #0f172a, #1e1b4b);
+  background-color: #0f172a;
   color: white;
   overflow: hidden;
 }
@@ -36,8 +36,8 @@
 .hero-description {
   margin-top: 25px;
   max-width: 550px;
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: 20px;
+  line-height: 2.0;
   color: #cbd5e1;
 }
 

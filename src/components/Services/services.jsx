@@ -42,8 +42,6 @@ function Services() {
             <h3>{service.title}</h3>
 
             <p>{service.description}</p>
-
-            <button>Explore</button>
           </div>
         ))}
       </div>

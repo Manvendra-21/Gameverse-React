@@ -26,7 +26,7 @@ function FeatureCard({
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button>Open</button>
+          <button>Dive In</button>
         </a>
       )}
 

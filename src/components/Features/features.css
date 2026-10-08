@@ -74,17 +74,17 @@
 
 .feature-card button {
   margin-top: 15px;
-  padding: 10px 18px;
+  padding: 10px 30px;
   border: none;
-  border-radius: 7px;
-  background-color: #8b5cf6;
+  border-radius: 10px;
+  background-color: #6541ba;
   color: white;
   cursor: pointer;
   transition: 0.3s;
 }
 
 .feature-card button:hover {
-  background-color: #7c3aed;
+  background-color: #241048;
 }
 
 /* Tablet */
