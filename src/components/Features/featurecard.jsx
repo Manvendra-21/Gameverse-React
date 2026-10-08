@@ -1,15 +1,35 @@
-function FeatureCard({ icon, title, description, href }) {
+function FeatureCard({
+  icon,
+  title,
+  description,
+  href,
+  onClick
+}) {
   return (
     <div className="feature-card">
-      <div className="feature-icon">{icon}</div>
+
+      <div className="feature-icon">
+        {icon}
+      </div>
 
       <h3>{title}</h3>
 
       <p>{description}</p>
 
-      <a href={href} target="_blank" rel="noopener noreferrer">
-        <button>Open</button>
-      </a>
+      {onClick ? (
+        <button onClick={onClick}>
+          Open
+        </button>
+      ) : (
+        <a
+          href={href}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <button>Open</button>
+        </a>
+      )}
+
     </div>
   );
 }

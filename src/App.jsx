@@ -7,7 +7,12 @@ import Contact from "./components/Contact/contact.jsx";
 import Footer from "./components/Footer/footer.jsx";
 import ThemeToggle from "./components/UI/themeToggle.jsx";
 
-function App() {
+import { Routes, Route } from "react-router-dom";
+
+import GameDiscovery from "./components/GameDiscovery/GameDiscovery.jsx";
+
+
+function Home() {
   return (
     <>
       <Navbar />
@@ -21,5 +26,25 @@ function App() {
     </>
   );
 }
+
+
+function App() {
+  return (
+    <Routes>
+
+      <Route
+        path="/"
+        element={<Home />}
+      />
+
+      <Route
+        path="/games"
+        element={<GameDiscovery />}
+      />
+
+    </Routes>
+  );
+}
+
 
 export default App;

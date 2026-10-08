@@ -1,14 +1,18 @@
 import "./features.css";
 import FeatureCard from "./featurecard";
+import { useNavigate } from "react-router-dom";
 
 
 function Features() {
+
+  const navigate = useNavigate();
   const features = [
     {
       icon: "🎮",
       title: "Game Discovery",
       description:
-        "Discover exciting games and explore new gaming experiences.",  
+        "Discover exciting games and explore new gaming experiences.",
+      onClick: () => navigate("/games"),
     },
     {
       icon: "🏆",
@@ -51,6 +55,7 @@ function Features() {
             title={feature.title}
             description={feature.description}
             href={feature.href}
+            onClick={feature.onClick}
           />
         ))}
       </div>

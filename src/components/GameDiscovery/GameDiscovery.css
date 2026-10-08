@@ -1,0 +1,416 @@
+.game-discovery {
+  min-height: 100vh;
+  padding: 110px 8% 80px;
+
+  background:
+    radial-gradient(
+      circle at 20% 10%,
+      rgba(120, 70, 255, 0.18),
+      transparent 35%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(60, 120, 255, 0.12),
+      transparent 35%
+    ),
+    #090014;
+
+  color: white;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.discovery-header {
+  text-align: center;
+
+  max-width: 800px;
+
+  margin: 0 auto 70px;
+}
+
+
+.discovery-small-title {
+  color: #9b6cff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 15px;
+}
+
+
+.discovery-header h1 {
+  font-size: 56px;
+
+  margin: 0 0 18px;
+
+  background: linear-gradient(
+    90deg,
+    #ffffff,
+    #a56cff
+  );
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.discovery-description {
+  color: #bcb1c8;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================
+   GENRE GRID
+========================= */
+
+.genre-grid {
+  max-width: 1100px;
+
+  margin: 0 auto 110px;
+
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 20px;
+}
+
+
+.genre-box {
+  height: 120px;
+
+  border-radius: 18px;
+
+  border: 1px solid
+    rgba(168, 85, 247, 0.25);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08),
+      rgba(255, 255, 255, 0.03)
+    );
+
+  backdrop-filter: blur(12px);
+
+  color: white;
+
+  cursor: pointer;
+
+  display: flex;
+
+  align-items: center;
+
+  padding: 25px;
+
+  gap: 18px;
+
+  transition: 0.3s;
+
+  text-align: left;
+}
+
+
+.genre-box:hover {
+  transform: translateY(-6px);
+
+  border-color: #9b6cff;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(139, 92, 246, 0.2),
+      rgba(255, 255, 255, 0.05)
+    );
+
+  box-shadow:
+    0 12px 35px
+    rgba(139, 92, 246, 0.2);
+}
+
+
+.genre-icon {
+  font-size: 32px;
+}
+
+
+.genre-name {
+  font-size: 21px;
+
+  font-weight: 600;
+}
+
+
+.genre-arrow {
+  margin-left: auto;
+
+  color: #a855f7;
+
+  font-size: 20px;
+}
+
+
+/* =========================
+   GAME SECTION
+========================= */
+
+.game-sections {
+  max-width: 1200px;
+
+  margin: auto;
+}
+
+
+.game-genre-section {
+  margin-bottom: 110px;
+
+  scroll-margin-top: 90px;
+}
+
+
+/* =========================
+   SECTION HEADING
+========================= */
+
+.section-heading {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 30px;
+}
+
+
+.section-icon {
+  font-size: 38px;
+}
+
+
+.section-heading h2 {
+  font-size: 32px;
+
+  margin: 0 0 5px;
+}
+
+
+.section-heading p {
+  color: #9d91aa;
+
+  margin: 0;
+}
+
+
+/* =========================
+   GAME CARDS
+========================= */
+
+.games-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+.game-card {
+  overflow: hidden;
+
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border: 1px solid
+    rgba(255, 255, 255, 0.1);
+
+  backdrop-filter: blur(10px);
+
+  transition: 0.3s;
+}
+
+
+.game-card:hover {
+  transform: translateY(-8px);
+
+  border-color: rgba(
+    168,
+    85,
+    247,
+    0.6
+  );
+
+  box-shadow:
+    0 15px 40px
+    rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   GAME IMAGE
+========================= */
+
+.game-card img {
+  width: 100%;
+
+  height: 210px;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: 0.4s;
+}
+
+
+.game-card:hover img {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   GAME CONTENT
+========================= */
+
+.game-card-content {
+  padding: 22px;
+}
+
+
+.game-rating {
+  color: #ffc857;
+
+  font-size: 14px;
+
+  margin-bottom: 10px;
+}
+
+
+.game-card h3 {
+  font-size: 23px;
+
+  margin: 0 0 12px;
+}
+
+
+.game-card p {
+  color: #bcb1c8;
+
+  line-height: 1.6;
+
+  font-size: 14px;
+
+  min-height: 68px;
+}
+
+
+.game-platform {
+  color: #9f8daf;
+
+  font-size: 13px;
+
+  margin: 15px 0;
+}
+
+
+/* =========================
+   BUTTON
+========================= */
+
+.game-button {
+  width: 100%;
+
+  padding: 11px;
+
+  border-radius: 9px;
+
+  border: 1px solid
+    rgba(168, 85, 247, 0.4);
+
+  background: rgba(
+    139,
+    92,
+    246,
+    0.12
+  );
+
+  color: white;
+
+  cursor: pointer;
+
+  transition: 0.25s;
+}
+
+
+.game-button:hover {
+  background: #8b5cf6;
+
+  border-color: #8b5cf6;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .genre-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+  .games-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .game-discovery {
+    padding: 90px 5% 60px;
+  }
+
+
+  .discovery-header h1 {
+    font-size: 40px;
+  }
+
+
+  .genre-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .games-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .genre-box {
+    height: 90px;
+  }
+
+
+  .game-card img {
+    height: 220px;
+  }
+
+}
