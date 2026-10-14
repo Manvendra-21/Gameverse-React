@@ -20,6 +20,7 @@ function Services() {
       title: "Gaming News",
       description:
         "Stay updated with the latest gaming news, releases, and industry updates.",
+      action: () => navigate("/news")
     },
     {
       icon: "🎯",

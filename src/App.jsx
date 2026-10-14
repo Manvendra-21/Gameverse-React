@@ -9,6 +9,7 @@ import ThemeToggle from "./components/UI/themeToggle.jsx";
 import { Routes, Route } from "react-router-dom";
 import GameDiscovery from "./components/GameDiscovery/GameDiscovery.jsx";
 import GameReviews from "./components/GameReviews/GameReviews.jsx";
+import GameNews from "./components/GameNews/GameNews";
 
 function Home() {
   return (
@@ -43,6 +44,10 @@ function App() {
       <Route
         path="/game-reviews"
         element={<GameReviews />}
+      />
+
+      <Route path="/news" 
+      element={<GameNews />} 
       />
 
     </Routes>
