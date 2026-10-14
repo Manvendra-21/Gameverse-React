@@ -124,3 +124,44 @@
   font-size: 20px;
   cursor: pointer;
 }
+
+.auth-tabs {
+  display: flex;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.auth-tabs button {
+  flex: 1;
+  padding: 10px;
+  color: white;
+  background: #282332;
+  border: 1px solid #493b60;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+.auth-tabs button.active {
+  background: #7651e8;
+}
+
+.auth-box input {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 12px;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.auth-box .error {
+  color: #ff7777;
+}
+
+.auth-box .success {
+  color: #76efa5;
+}
