@@ -1,4 +1,5 @@
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 import "./contact.css";
 
 function Contact() {
@@ -8,32 +9,73 @@ function Contact() {
     message: "",
   });
 
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState("");
+  const [isSending, setIsSending] = useState(false);
 
   function handleChange(event) {
     const { name, value } = event.target;
 
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
 
-    if (!formData.name || !formData.email || !formData.message) {
-      alert("Please fill in all the fields.");
+    if (isSending) return;
+
+    const { name, email, message } = formData;
+
+    if (
+      !name.trim() ||
+      !email.trim() ||
+      !message.trim()
+    ) {
+      setStatus("Please fill in all the fields.");
       return;
     }
 
-    setSubmitted(true);
+    setIsSending(true);
+    setStatus("");
 
-    setFormData({
-      name: "",
-      email: "",
-      message: "",
-    });
+    try {
+      const result = await emailjs.send(
+        "service_plom62y",
+        "template_8m3zntw",
+        {
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim(),
+        },
+        {
+          publicKey: "Egsb4ePyhKl-1VHoX",
+        }
+      );
+
+      if (result.status === 200) {
+        setStatus("Message sent successfully! 🎮");
+
+        setFormData({
+          name: "",
+          email: "",
+          message: "",
+        });
+      } else {
+        setStatus(
+          "Unable to send your message. Please try again."
+        );
+      }
+    } catch (error) {
+      console.error("Email sending failed:", error);
+
+      setStatus(
+        "Something went wrong. Please try again later."
+      );
+    } finally {
+      setIsSending(false);
+    }
   }
 
   return (
@@ -54,12 +96,13 @@ function Contact() {
           <h3>Let's Connect</h3>
 
           <p>
-            We'd love to hear from you. Reach out to us and become part of
-            the Gamverse community.
+            We'd love to hear from you. Reach out to us and become
+            part of the Gamverse community.
           </p>
 
           <div className="contact-item">
             <span>📧</span>
+
             <div>
               <strong>Email</strong>
               <p>hello@gamverse.com</p>
@@ -68,6 +111,7 @@ function Contact() {
 
           <div className="contact-item">
             <span>🎮</span>
+
             <div>
               <strong>Community</strong>
               <p>Join our gaming community</p>
@@ -76,6 +120,7 @@ function Contact() {
 
           <div className="contact-item">
             <span>🌐</span>
+
             <div>
               <strong>Available</strong>
               <p>24/7 Online</p>
@@ -83,7 +128,10 @@ function Contact() {
           </div>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        <form
+          className="contact-form"
+          onSubmit={handleSubmit}
+        >
           <label htmlFor="name">Name</label>
 
           <input
@@ -93,6 +141,9 @@ function Contact() {
             value={formData.name}
             onChange={handleChange}
             placeholder="Enter your name"
+            autoComplete="name"
+            maxLength={100}
+            required
           />
 
           <label htmlFor="email">Email</label>
@@ -104,6 +155,9 @@ function Contact() {
             value={formData.email}
             onChange={handleChange}
             placeholder="Enter your email"
+            autoComplete="email"
+            maxLength={254}
+            required
           />
 
           <label htmlFor="message">Message</label>
@@ -115,13 +169,21 @@ function Contact() {
             onChange={handleChange}
             placeholder="Write your message..."
             rows="5"
-          ></textarea>
+            maxLength={5000}
+            required
+          />
 
-          <button type="submit">Send Message</button>
+          <button type="submit" disabled={isSending}>
+            {isSending ? "Sending..." : "Send Message"}
+          </button>
 
-          {submitted && (
-            <p className="success-message">
-              Message sent successfully! 🎮
+          {status && (
+            <p
+              className="success-message"
+              role="status"
+              aria-live="polite"
+            >
+              {status}
             </p>
           )}
         </form>
