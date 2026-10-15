@@ -19,6 +19,7 @@ function Features() {
       title: "Achievements",
       description:
         "Track your progress, complete challenges, and unlock achievements.",
+      onClick: () => navigate("/achievements"),
     },
     {
       icon: "👥",

@@ -10,6 +10,7 @@ import { Routes, Route } from "react-router-dom";
 import GameDiscovery from "./components/GameDiscovery/GameDiscovery.jsx";
 import GameReviews from "./components/GameReviews/GameReviews.jsx";
 import GameNews from "./components/GameNews/GameNews";
+import Achievements from "./components/Achievements/Achievements.jsx";
 
 function Home() {
   return (
@@ -46,8 +47,14 @@ function App() {
         element={<GameReviews />}
       />
 
-      <Route path="/news" 
+      <Route 
+      path="/news" 
       element={<GameNews />} 
+      />
+
+      <Route
+        path="/achievements"
+        element={<Achievements />}
       />
 
     </Routes>
