@@ -170,7 +170,7 @@
 
   /* show at most 3 lines of the title, then cut it off */
   display: -webkit-box;
-  -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
